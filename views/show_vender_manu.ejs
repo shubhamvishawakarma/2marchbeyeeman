@@ -1,0 +1,235 @@
+<%-include('./partials/header.ejs')%>
+<%-include('./partials/Left_Manu_bar.ejs')%>
+
+    <section class="content">
+            
+            <div class="page-body">
+                
+                <h3  style="color: hsl(246, 97%, 45%);">Seller Details</h3>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active">
+                            <a href="/public/shop_vender_menu/<%=data._id%>" role="tab" ><h4>Shop Details</h4></a></li>
+                            <!-- <li><a href="/public/push_notification_service/<%=data._id%>" role="tab" >Push notification</a></li>
+                            <li><a href="/public/delivery_boy_vender_list/<%=data._id%>" role="tab" >Delivery boy</a></li>
+                            <li><a href="/public/user_qr_details/<%=data._id%>" role="tab" >Users</a></li> -->
+                            <li><a href="/public/product_vender_list/<%=data._id%>"" role="tab" ><h4>Products</h4></a></li>
+                            <li><a href="/public/shop_vender_banner_list/<%=data._id%>" role="tab" ><h4>Banners</h4></a></li>
+                            <li><a href="/public/report_vender_details/<%=data._id%>" role="tab" ><h4>Reports</h4></a></li>
+                           
+                            <li><a href="/public/order_vender_details/<%=data._id%>" role="tab" ><h4>Orders</h4></a></li>
+                            <li><a href="/public/vender_setting_details/<%=data._id%>" role="tab" ><h4>Setting</h4></a></li>
+                        </ul>
+
+                       
+                       </br>
+
+
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                        <div class="panel panel-default contact-grid">
+                            <div class="panel-body">
+                               
+                                <a href="javascript:void(0);">
+                                    <img src="/uploads/<%=data.shop_image[0]%>" alt="User Avatar" />
+                                    <div class="name-surname"><%=data.shop_name%></div>
+                                    <div class="place"><%=data.shop_address%></div>
+
+                                    
+                                </a>
+                                <div class="social-accounts">
+                                    <a href="javascript:void(0);" data-title="Shop Qr Code" data-toggle="tooltip">
+                                        <i class="fa fa-qrcode"></i>
+                                    </a>
+                                  
+                                </div>
+                                <div class="bio">
+                                      <%=data.createdAt%>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                         
+                    
+                            <div class="row mt-5">
+                                <div class=" col-md-3" id="tab1">
+                                <h5 style="color: hsl(246, 97%, 45%);">Shop details</h5>
+
+                                    <table class="table table-bordered table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Total Product</strong></td>
+                                                <td><%=list[0].usercount%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Total Order</strong></td>
+                                                <td><%=list[1].vendercount%></td>
+                                            </tr>
+                                            <!-- <tr>
+                                                <td><strong>Total Driver</strong></td>
+                                                <td><%=list[2].categorycount%></td>
+                                            </tr> -->
+                                            <tr>
+                                                <td><strong>Total Seller</strong></td>
+                                                <td>
+                                                    <%=list[3].ordercount%>
+                                                </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+    
+    
+                               
+                              <div class="col-md-5">
+                                <h5 style="color: hsl(246, 97%, 45%);">Shop Information</h5>
+                                <table class="table table-bordered  table-hover">
+                                 <tbody>
+                                 <tr>
+                                     <td><strong>Shop Name</strong></td>
+                                     <td><%=data.shop_name%></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>Phone No.</strong></td>
+                                     <td><%=data.mobile%></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>Address</strong></td>
+                                     <td><%=data.shop_address%></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>Status</strong></td>
+                                     <td><%=data.shop_status%></td>
+                                 </tr>
+                                </table>
+                              </div>
+                               
+                               
+                            <div class="col-md-4">
+                                <table class="table table-bordered  table-hover">
+                                    <h5 style="color: hsl(246, 97%, 45%);">Seller Information</h5>
+                                    <tr>
+                                        <td><strong>Manager Name</strong></td>
+                                        <td>
+                                            <%=data.manager_name%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mobile No</strong></td>
+                                        <td>
+                                            <%=data.mobile%>
+                                        </td>
+                                    </tr>
+            
+                                </table>
+                            </div>
+                            </div>
+                            <div class="row">
+
+                            <div class=" col-md-12" id="tab1">
+                                <h5 style="color: hsl(246, 97%, 45%);">Bank Information</h5>
+                                <div class="col-md-5">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Bank Name</strong></td>
+                                                <td><%=data.bank_name%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Branch</strong></td>
+                                                <td>Indore</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="col-md-7">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Holder Name</strong></td>
+                                                <td><%=data.manager_name%></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>A/C No</strong></td>
+                                                <td><%=data.acc_no%></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                               
+                                 </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="page-body ">
+
+             <h4 style="color: hsl(246, 97%, 45%);">Payment settlement</h4>
+
+                <div class="panel panel-default text-center">
+
+                  <div class="row"> 
+
+
+                      <div class="col-md-4 text-center" style="height:300px; display: flex; align-items: center; flex-direction: column; justify-content: space-around;">
+                          <span><h3>GH₵ 2500.00</h3>
+                              <h5 style="color: #009688;">Withdrawable Balance</h5></span>
+
+                              <span><h4>GH₵ 1000.00</h4>
+                                <h5 style="color: hsl(352, 80%, 40%);">Pending Withdraw</h5></span>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="col-md-9">
+                          <div class="row">
+                              <div class="col-md-8">
+                                  <h3>GH₵ 5000.00</h3>
+                                      <h4  style="color:black
+                                      ">Total Earning amount</h4>
+                              </div>
+                            </div>
+                          
+                              <div class="row">
+                                <div class="col-md-8">
+                                    <h4>GH₵ 1000.00</h4>
+                                        <h5 style="color:black">Cash on Earning amount</h5>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h4>GH₵ 500.00</h4>
+                                        <h5  style="color:black;">Admin Commission amount</h5>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    
+                        <div class="col-md-3">
+                            <div class="row">
+                                <span>
+                                    <button type="open-button" onclick="openForm()"class="btn btn-info add-new"><a href="">All transactions</a></button></span>
+                                    
+                                       
+                                </div>
+                              </div>
+
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                           
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+        </section>
+
+<%-include('./partials/footers.ejs')%>
